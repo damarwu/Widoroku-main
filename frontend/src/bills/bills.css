@@ -1,0 +1,104 @@
+/* =========================================================
+   Halaman Tagihan & pembayaran
+   ========================================================= */
+
+.bills-heading-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.bills-panel .panel-heading{align-items:flex-start}
+
+/* --- Ringkasan --- */
+.bills-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.bills-summary>div{padding:12px 13px;border-radius:12px;background:#fafcfb;border:1px solid #eef2ee;min-width:0}
+.bills-summary span{display:block;font-size:9px;letter-spacing:.4px;text-transform:uppercase;color:#94a49a;margin-bottom:6px}
+.bills-summary b{display:block;font:800 15px Manrope,sans-serif;color:#2f5541;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bills-summary b.warn{color:#b07a25}
+.bills-summary b.good{color:#22744c}
+.bills-summary small{display:block;font-size:9px;color:#9ba99f;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* --- Toolbar & filter --- */
+.bills-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.bills-filters{display:flex;gap:3px;padding:3px;border-radius:999px;background:#f3f7f4;border:1px solid #e9f0ea}
+.bills-filters button{padding:7px 12px;border:0;border-radius:999px;background:transparent;color:#6f8778;font:600 10px Manrope,sans-serif;transition:.15s}
+.bills-filters button:hover{color:#2f6b4c}
+.bills-filters button.active{background:#fff;color:#1f6a46;box-shadow:0 2px 8px #14361f14}
+
+/* --- Desktop: datatable --- */
+.bills-table-wrap{overflow:auto;border:1px solid #eef2ee;border-radius:12px}
+.bills-table{width:100%;border-collapse:collapse;font-size:11px}
+.bills-table thead th{position:sticky;top:0;background:#f7faf7;text-align:left;font-size:9px;letter-spacing:.4px;text-transform:uppercase;color:#829388;font-weight:700;padding:11px 12px;border-bottom:1px solid #e8eee9;white-space:nowrap}
+.bills-table tbody td{padding:11px 12px;border-bottom:1px solid #f1f5f1;color:#52695b;vertical-align:middle}
+.bills-table tbody tr:last-child td{border-bottom:0}
+.bills-table tbody tr:hover{background:#fafdfb}
+.bills-table td small{display:block;color:#9ba99f;font-size:9px;margin-top:3px}
+.bills-table .bill-money{white-space:nowrap;font-weight:600}
+
+.bill-identity{display:flex;align-items:center;gap:10px;min-width:0}
+.bill-identity b{display:block;font-size:11px;color:#31543e;white-space:nowrap}
+.bill-identity small{display:block;font-size:9px;color:#9ba99f;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bill-avatar{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;flex-shrink:0;font:800 10px Manrope,sans-serif;color:#276b49;background:linear-gradient(145deg,#e3f5e8,#c8ebd3);box-shadow:inset 0 1px 0 #ffffffb8}
+.bill-period b{display:block;font-size:11px;color:#31543e;white-space:nowrap}
+.bill-period small{display:block;font-size:9px;color:#9ba99f;margin-top:3px;white-space:nowrap}
+
+.bill-pay-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:8px;border:1px solid #cde6d6;background:#f2faf5;color:#22744c;font-size:10px;font-weight:700;transition:.15s}
+.bill-pay-btn:hover{background:#e5f5ea;border-color:#a4cfb2}
+
+/* --- Mobile: kartu per warga --- */
+.bills-cards{display:none;gap:11px}
+.bill-card{background:linear-gradient(155deg,#fff,#fdfefd);border:1px solid #e6eee7;border-radius:14px;padding:14px;box-shadow:0 4px 15px #123b2704,inset 0 1px 0 #fff}
+.bill-card-head{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.bill-card-head>div:nth-child(2){min-width:0;flex:1}
+.bill-card-head b{display:block;font-size:12px;color:#2c5138}
+.bill-card-head small{display:block;font-size:9px;color:#9ba99f;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bill-card-meta{display:grid;gap:6px;font-size:10px;color:#6b8377;margin-bottom:12px}
+.bill-card-meta span{display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+.bill-card-meta svg{width:13px;height:13px;flex-shrink:0;color:#8aa295;margin-top:1px}
+.bill-card-meta b{color:#31543e}
+.bill-card-actions{display:flex;padding-top:11px;border-top:1px solid #f0f4f0}
+.bill-card-actions button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px;border:1px solid #e7eee8;background:#fff;border-radius:9px;color:#4c7561;font-size:10px;font-weight:700}
+.bill-card-actions button:disabled{opacity:.55;cursor:not-allowed}
+.bill-card-actions button:not(:disabled):active{background:#f2f9f4}
+
+@media(max-width:900px){
+  .bills-table-wrap{display:none}
+  .bills-cards{display:grid}
+  .bills-summary{grid-template-columns:1fr 1fr}
+  .bills-panel .panel-heading{flex-direction:column;align-items:stretch;gap:12px}
+  .bills-heading-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .bills-heading-actions .primary-btn,.bills-heading-actions .ghost-btn{justify-content:center}
+  .bills-heading-actions .primary-btn:only-child{grid-column:1 / -1}
+}
+
+@media(max-width:560px){
+  .bills-heading-actions{grid-template-columns:1fr}
+  .bills-toolbar{gap:8px}
+  .bills-filters{width:100%;justify-content:space-between}
+  .bills-filters button{flex:1;padding:7px 8px}
+}
+
+/* --- Modal pembayaran --- */
+.pay-select-all{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:11px 12px;border-radius:10px;background:#fafcfb;border:1px solid #eef2ee}
+.pay-select-all>span{font-size:10px;color:#7a9083}
+.pay-select-all>span b{color:#2f5541}
+.pay-select-all>div{display:flex;gap:6px;flex-wrap:wrap}
+
+.pay-bill-list{display:grid;gap:7px;max-height:260px;overflow:auto;padding:2px 4px 6px 2px;overscroll-behavior:contain}
+.pay-bill-list::-webkit-scrollbar{width:6px}
+.pay-bill-list::-webkit-scrollbar-track{background:transparent}
+.pay-bill-list::-webkit-scrollbar-thumb{background:#cfe0d5;border-radius:99px}
+.pay-bill-list::-webkit-scrollbar-thumb:hover{background:#aecbb9}
+/* .form-grid label memasang display:grid; baris tagihan butuh flex. */
+.form-grid .pay-bill{display:flex;align-items:center;gap:10px;padding:10px 11px;border:1px solid #eaf0eb;border-radius:10px;background:#fff;cursor:pointer;transition:.15s;font-weight:400;color:inherit}
+.pay-bill:hover{border-color:#bfe0ca;background:#fbfefc}
+.pay-bill.checked{border-color:#a9d6b9;background:#f4fbf6}
+.pay-bill input{position:absolute;opacity:0;pointer-events:none}
+.pay-bill-box{width:18px;height:18px;flex-shrink:0;display:grid;place-items:center;border-radius:6px;border:1.5px solid #d3e2d8;background:#fff;color:#fff}
+.pay-bill.checked .pay-bill-box{background:#2b8557;border-color:#2b8557}
+.pay-bill-info{flex:1;min-width:0}
+.pay-bill-info b{display:block;font-size:11px;color:#2f5541}
+.pay-bill-info small{display:block;font-size:9px;color:#9ba99f;margin-top:2px}
+.pay-bill-amount{text-align:right;white-space:nowrap}
+.pay-bill-amount b{display:block;font-size:11px;color:#31543e}
+.pay-bill-amount small{display:block;font-size:8.5px;color:#a4b1a8;margin-top:2px}
+
+@media print{
+  .bills-panel{display:none}
+}

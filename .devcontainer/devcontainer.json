@@ -1,0 +1,16 @@
+{
+  "name": "Widoroku RT Development",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/go:1": {"version": "1.24"},
+    "ghcr.io/devcontainers/features/node:1": {"version": "22"},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "forwardPorts": [5173, 8080, 5432],
+  "portsAttributes": {
+    "5173": {"label": "Widoroku Web", "onAutoForward": "openBrowser"},
+    "8080": {"label": "Go API"},
+    "5432": {"label": "PostgreSQL"}
+  },
+  "customizations": {"vscode": {"extensions": ["golang.go", "dbaeumer.vscode-eslint"]}}
+}

@@ -1,0 +1,139 @@
+/* =========================================================
+   Halaman Kumpulan Ahad Pon
+   ========================================================= */
+
+.kumpulan-heading-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kumpulan-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+
+.kumpulan-table .kumpulan-date{display:flex;align-items:center;gap:10px;min-width:0}
+.kumpulan-table .kumpulan-date b{display:block;font-size:11px;color:#31543e;white-space:nowrap}
+.kumpulan-table .kumpulan-date small{display:block;font-size:9px;color:#9ba99f;margin-top:3px;white-space:nowrap}
+.kumpulan-period{font-size:10px;color:#6b8377;white-space:nowrap}
+.kumpulan-period span{color:#b3c4ba;padding:0 3px}
+.kumpulan-auto{display:block;font-size:9px;color:#9ba99f;margin-top:4px}
+
+.resident-action.danger:hover{border-color:#e8b4ad;color:#b0453a;background:#fdf4f3}
+
+/* --- Rekap kas di modal detail --- */
+.kumpulan-finance{border:1px solid #e6eee7;border-radius:13px;overflow:hidden}
+.kumpulan-finance-head{display:flex;align-items:center;gap:12px;padding:13px 14px;background:linear-gradient(145deg,#eef8f1,#e3f2e8);border-bottom:1px solid #dcece2}
+.kumpulan-finance-head>div{flex:1;min-width:0}
+.kumpulan-finance-head h4{margin:0;font:700 12px Manrope,sans-serif;color:#2b5138}
+.kumpulan-finance-head p{margin:4px 0 0;font-size:9px;color:#7d9488}
+.kumpulan-finance-head>b{font:800 15px Manrope,sans-serif;color:#22744c;white-space:nowrap}
+.kumpulan-finance-rows{padding:6px 14px 10px}
+.kumpulan-finance-rows>div{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #f2f6f2;font-size:10px;color:#6b8377}
+.kumpulan-finance-rows>div:last-child{border-bottom:0}
+.kumpulan-finance-rows b{color:#365945}
+.kumpulan-finance-rows .total{border-top:1px solid #e6eee7;margin-top:4px;padding-top:9px;font-weight:700;color:#2b5138}
+.kumpulan-finance-rows .total b{color:#22744c}
+
+/* --- Ringkasan undangan --- */
+.invitation-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.invitation-summary>div{padding:11px 12px;border-radius:11px;background:#fafcfb;border:1px solid #eef2ee;min-width:0}
+.invitation-summary span{display:block;font-size:9px;letter-spacing:.3px;text-transform:uppercase;color:#94a49a;margin-bottom:5px}
+.invitation-summary b{display:block;font-size:11px;color:#2f5541;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.invitation-tabs{display:flex;gap:6px;padding:4px;background:#f3f7f4;border:1px solid #e9f0ea;border-radius:11px}
+.invitation-tabs button{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 10px;border:0;border-radius:8px;background:transparent;color:#708878;font:700 10.5px Manrope,sans-serif;cursor:pointer;transition:.15s}
+.invitation-tabs button:hover{color:#2f6b4c}
+.invitation-tabs button.active{background:#fff;color:#1f6a46;box-shadow:0 2px 8px #14361f14}
+.invitation-toolbar{display:flex;gap:6px;flex-wrap:wrap}
+.inv-savings-mobile{display:none;color:#8aa192!important}
+.invitation-empty{text-align:center;color:#9ba99f;font-size:10px;padding:18px 10px!important}
+.invitation-sheet-wrap{display:none}
+.invitation-sheet-wrap.is-visible{display:grid;gap:10px}
+.print-hint{color:#8b9a90}
+
+.invitation-list{max-height:min(46vh,440px);overflow:auto;border:1px solid #eef2ee;border-radius:11px}
+.invitation-list table{width:100%;border-collapse:collapse;font-size:11px}
+.invitation-list thead th{position:sticky;top:0;background:#f7faf7;text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:.4px;color:#829388;padding:9px 11px;border-bottom:1px solid #e8eee9;z-index:1}
+.invitation-list tbody td{padding:9px 11px;border-bottom:1px solid #f2f6f2;color:#52695b}
+.invitation-list tbody tr:last-child td{border-bottom:0}
+.invitation-list td b{display:block;font-size:10px;color:#31543e}
+.invitation-list td small{display:block;font-size:9px;color:#9ba99f;margin-top:2px}
+.invitation-list .text-link{font-size:10px;white-space:nowrap}
+.invitation-list .text-link:disabled{opacity:.4;cursor:not-allowed}
+
+/* --- Dokumen undangan (tampil di modal, jadi PDF saat print) --- */
+.invitation-sheet{border:1px solid #e6eee7;border-radius:12px;padding:22px 24px;background:#fff;color:#20372f}
+.sheet-head{text-align:center;border-bottom:2px solid #1c6c48;padding-bottom:12px;margin-bottom:14px}
+.sheet-head h1{margin:0;font:800 14px Manrope,sans-serif;letter-spacing:.6px;color:#1c4a34}
+.sheet-head p{margin:5px 0 0;font-size:9px;color:#7d9488;letter-spacing:.4px}
+.sheet-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:13px}
+.sheet-meta span{display:block;font-size:8px;text-transform:uppercase;letter-spacing:.4px;color:#94a49a;margin-bottom:3px}
+.sheet-meta b{font-size:10px;color:#2f5541}
+.sheet-lead{font-size:9.5px;line-height:1.7;color:#5a7164;margin:0 0 12px}
+.sheet-table{width:100%;border-collapse:collapse;font-size:9px}
+.sheet-table th{background:#f2f8f4;border:1px solid #dbe9df;padding:6px 7px;text-align:left;font-size:8px;text-transform:uppercase;letter-spacing:.3px;color:#48695a}
+.sheet-table td{border:1px solid #e6eee9;padding:5px 7px;color:#3d5a4a}
+.sheet-table tbody tr:nth-child(even) td{background:#fbfdfb}
+.sheet-table tfoot td{font-weight:700;background:#f2f8f4;border:1px solid #dbe9df;padding:6px 7px;color:#204a35}
+.sheet-sign{display:flex;justify-content:space-between;gap:30px;margin-top:22px}
+.sheet-sign>div{text-align:center;min-width:150px}
+.sheet-sign span{display:block;font-size:8.5px;color:#7d9488;margin-bottom:34px}
+.sheet-sign b{font-size:9px;color:#3d5a4a;font-weight:600}
+
+@media(max-width:900px){
+  .invitation-summary{grid-template-columns:1fr 1fr}
+  .invitation-sheet{padding:16px}
+  .sheet-meta{grid-template-columns:1fr;gap:7px}
+  .invitation-list{max-height:240px}
+}
+
+@media(max-width:760px){
+  .kumpulan-panel .panel-heading{flex-direction:column;align-items:stretch;gap:12px}
+  .kumpulan-heading-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .kumpulan-heading-actions .primary-btn,.kumpulan-heading-actions .ghost-btn{justify-content:center}
+}
+
+@media(max-width:560px){
+  .kumpulan-heading-actions{grid-template-columns:1fr}
+  .invitation-summary{grid-template-columns:1fr 1fr}
+  .invitation-summary>div{padding:9px 10px}
+  .invitation-tabs button{font-size:10px;padding:9px 6px}
+  .invitation-list table{font-size:10.5px}
+  .invitation-list thead th,.invitation-list tbody td{padding:7px 6px;font-size:10px}
+  .invitation-list td b{font-size:9.5px}
+  .invitation-list td small{font-size:8.5px}
+  .invitation-list .text-link{font-size:9px;gap:3px}
+  .invitation-list .text-link svg{width:11px;height:11px}
+  /* Tabungan pindah ke bawah nama agar kolom status & aksi tetap terlihat */
+  .invitation-list thead th:nth-child(3),.invitation-list tbody td:nth-child(3){display:none}
+  .inv-savings-mobile{display:block}
+}
+
+/* --- Print: hanya dokumen undangan (portal di <body>) --- */
+.print-doc{display:none}
+
+@media print{
+  /* Isi aplikasi disembunyikan; dokumen cetak mengalir normal di <body>
+     sehingga tabel panjang bisa pecah ke halaman berikutnya. */
+  body:has(> .print-doc) > #root{display:none!important}
+  .print-doc{display:block!important}
+  #invitation-print-area{position:static;width:100%;border:0;border-radius:0;padding:0;box-shadow:none}
+
+  /* Rapatkan dokumen supaya 95 KK cukup 3 halaman dan tanda tangan tidak
+     terlempar sendirian ke halaman baru. */
+  .sheet-head{padding-bottom:8px;margin-bottom:10px}
+  .sheet-meta{margin-bottom:9px}
+  .sheet-lead{font-size:9pt;margin-bottom:8px}
+  .sheet-table{font-size:9pt}
+  .sheet-table th,.sheet-table td{padding:3px 6px}
+  .sheet-table tr{break-inside:avoid}
+  .sheet-table thead{display:table-header-group}
+  .sheet-table tfoot{display:table-row-group}
+  .sheet-sign{margin-top:16px;break-inside:avoid}
+
+  html,body{background:#fff!important}
+}
+
+@page{margin:12mm}
+
+/* --- Konfirmasi pembatalan kumpulan --- */
+.bill-warning{display:grid;gap:12px;font-size:11px;line-height:1.65;color:#526b5b}
+.bill-warning-lead{display:flex;align-items:flex-start;gap:9px;margin:0;padding:11px 12px;border-radius:10px;background:#fdf6e7;border:1px solid #f3e3c2;color:#8a6220}
+.bill-warning-lead svg{flex-shrink:0;margin-top:1px}
+.bill-warning-lead b{color:#7a5416}
+.bill-warning ul{margin:0;padding-left:17px;display:grid;gap:6px;color:#6b8377}
+.bill-warning li::marker{color:#a9c4b3}

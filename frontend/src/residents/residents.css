@@ -1,0 +1,36 @@
+/* =========================================================
+   Halaman Data Warga — datatable (desktop) / card (mobile)
+   ========================================================= */
+
+/* --- Detail warga --- */
+.detail-hero{display:flex;align-items:center;gap:12px;padding:14px;border-radius:13px;background:linear-gradient(145deg,#eef8f1,#e3f2e8);border:1px solid #d9ecdf}
+.detail-hero b{display:block;font-size:13px;color:#2b5138}
+.detail-hero small{display:block;font-size:10px;color:#7d9488;margin-top:3px}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.detail-item{padding:11px 12px;border-radius:10px;background:#fafcfb;border:1px solid #eef2ee;min-width:0}
+.detail-item span{display:block;font-size:9px;letter-spacing:.4px;text-transform:uppercase;color:#94a49a;margin-bottom:5px}
+.detail-item b{display:block;font-size:11px;color:#365945;word-break:break-word}
+.detail-item.wide{grid-column:1 / -1}
+.detail-qr{display:grid;place-items:center;padding:14px;border-radius:12px;border:1px dashed #b9d9c4;background:#fbfefc}
+
+@media(max-width:560px){
+  .detail-grid{grid-template-columns:1fr}
+}
+
+/* --- QR --- */
+.qr-sheet{display:grid;place-items:center;gap:4px;text-align:center;padding:18px;background:#fff;border:1px solid #eef2ee;border-radius:14px}
+.qr-sheet .qr-code{display:grid;place-items:center;padding:8px;background:#fff}
+.qr-sheet .qr-house{font:800 14px Manrope,sans-serif;color:#284535;margin-top:10px;letter-spacing:.2px}
+.qr-sheet .qr-head{font-size:11px;color:#6b8377;margin-top:3px}
+.qr-sheet .qr-token{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:9px;color:#a3b0a8;margin-top:6px;letter-spacing:.6px}
+.qr-note{display:flex;gap:8px;font-size:10px;line-height:1.6;color:#839188}
+.qr-note svg{width:14px;height:14px;flex-shrink:0;color:#6aa886;margin-top:1px}
+
+@media print{
+  body:has(#qr-print-area) *{visibility:hidden}
+  #qr-print-area,#qr-print-area *{visibility:visible!important}
+  #qr-print-area{position:absolute;left:0;top:0;width:100%;display:grid;place-items:center;border:0;padding:0}
+  .modal-backdrop{position:static;background:none;backdrop-filter:none;padding:0}
+  .modal{border:0;box-shadow:none;max-width:none;max-height:none}
+  .modal-header,.modal-footer{display:none}
+}

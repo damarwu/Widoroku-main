@@ -1,0 +1,81 @@
+.resident-screen{min-height:100vh;background:#f4f7f4;color:#20372f}
+.resident-header{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 max(4vw,20px);background:#fff;border-bottom:1px solid #e5ece6}
+.resident-brand{display:flex;align-items:center;gap:10px;color:#14513d;text-decoration:none}
+.resident-brand>span{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:#e2f3e9}
+.resident-brand b{font:800 16px Manrope,sans-serif}
+.resident-brand small{display:block;color:#819188;font:600 8px 'DM Sans',sans-serif;letter-spacing:1.2px}
+.resident-account{display:flex;align-items:center;gap:18px;color:#536b5c;font-size:11px}
+.resident-account button,.resident-error button{display:flex;align-items:center;gap:6px;padding:9px 11px;border:1px solid #e1e9e2;border-radius:8px;background:white;color:#345943;font-size:11px;font-weight:600}
+.resident-content{max-width:1220px;margin:0 auto;padding:28px 24px}
+.resident-welcome{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:180px;margin-bottom:20px;padding:27px 30px;border-radius:16px;background:linear-gradient(110deg,#133f2d,#28754d);color:white}
+.resident-welcome>div:first-child>span{color:#bde4c6;font-size:9px;font-weight:700;letter-spacing:1.4px}
+.resident-welcome h1{margin:11px 0 7px;font:800 clamp(22px,3vw,32px) Manrope,sans-serif;letter-spacing:-.8px}
+.resident-welcome p{margin:0;color:#d0e6d6;font-size:12px;line-height:1.6}
+.resident-welcome small{display:block;margin-top:7px;color:#c2ddca;font-size:10px}
+.resident-welcome-icon{width:66px;height:66px;flex:none;display:grid;place-items:center;border:1px solid #ffffff2c;border-radius:19px;background:#ffffff14;color:#d2efd9}
+.resident-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:18px}
+.resident-stat-grid article{display:grid;justify-items:start;gap:8px;padding:17px;border:1px solid #e5ece6;border-radius:12px;background:#fff}
+.resident-stat-icon{display:grid;place-items:center;width:35px;height:35px;border-radius:10px}
+.resident-stat-icon.amber{background:#fff3df;color:#a66a16}.resident-stat-icon.green{background:#e4f4e9;color:#237049}.resident-stat-icon.blue{background:#e8f0ff;color:#4771bd}.resident-stat-icon.violet{background:#f1eafd;color:#7854aa}
+.resident-stat-icon.cyan{background:#e4f6f7;color:#218394}
+.resident-stat-grid small{color:#78877d;font-size:10px}
+.resident-stat-grid article>b{color:#1b3e2d;font:800 18px Manrope,sans-serif}
+.resident-stat-grid article>span:last-child{color:#91a097;font-size:9px}
+.resident-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px}
+.resident-card{min-width:0;padding:19px;border:1px solid #e5ece6;border-radius:13px;background:#fff}
+.resident-pam-card{margin-bottom:16px}
+.resident-pam-due{color:#9a641a}
+.resident-pam-paid{color:#237049}
+.resident-pam-message{padding:10px 12px;border-radius:8px;background:#eff8f1;color:#28633e;font-size:11px;line-height:1.5}
+.resident-meter-entry{margin:12px 0 16px;padding:14px;border:1px solid #e5ece6;border-radius:10px;background:#f8faf8}
+.resident-meter-entry h3{display:flex;align-items:center;gap:7px;margin:0 0 7px;color:#294a35;font:700 12px Manrope,sans-serif}
+.resident-meter-entry>p,.resident-pam-footnote{color:#78877d;font-size:10px;line-height:1.5}
+.resident-meter-entry form{display:flex;align-items:end;flex-wrap:wrap;gap:10px}
+.resident-meter-entry label{display:grid;gap:5px;color:#65766b;font-size:10px}
+.resident-meter-entry input,.resident-payment-choice select{min-height:34px;padding:7px 9px;border:1px solid #dfe7e0;border-radius:7px;background:white;color:#294a35;font-size:11px}
+.resident-pam-button{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:0;border-radius:7px;background:#236746;color:white;font-size:10px;font-weight:700;cursor:pointer}
+.resident-pam-button:disabled{opacity:.5;cursor:not-allowed}
+.resident-meter-status{padding:8px 10px;border-radius:7px}
+.resident-meter-status.pending{background:#fff4df;color:#8d641c}
+.resident-meter-status.rejected{background:#fff0ee;color:#9c4236}
+.resident-payment-choice{display:grid;min-width:145px;gap:6px}
+.resident-payment-choice small{max-width:220px;color:#78877d;font-size:9px;line-height:1.5}
+.resident-payment-instructions{display:grid;gap:5px;padding:9px;border-radius:7px;background:#f5f8f5;color:#65766b;font-size:9px;line-height:1.5}
+.resident-payment-instructions img{width:140px;max-height:180px;object-fit:contain;margin:4px auto}
+.resident-payment-proof{display:grid;gap:8px;padding-top:5px}
+.resident-payment-proof label{display:grid;gap:4px;color:#65766b;font-size:9px}
+.resident-payment-proof input:not([type=file]){min-height:32px;padding:6px 8px;border:1px solid #dfe7e0;border-radius:7px;font-size:10px}
+.resident-payment-proof input[type=file]{max-width:215px;font-size:9px}
+.resident-payment-proof>img{width:90px;height:90px;object-fit:cover;border-radius:7px}
+.resident-pam-footnote{margin:12px 0 0}
+.resident-pam-history{margin-top:22px;padding-top:16px;border-top:1px solid #e8eee9}.resident-pam-history h3{margin:0;color:#294a35;font:700 12px Manrope,sans-serif}.resident-pam-history>p{margin:5px 0 10px;color:#87948a;font-size:10px}
+.resident-card>header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;color:#267454}
+.resident-card>header h2{margin:0;color:#294a35;font:700 14px Manrope,sans-serif}
+.resident-card>header p{margin:5px 0 0;color:#87948a;font-size:10px}
+.resident-list{display:grid}
+.resident-list article{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #eef2ef;font-size:11px}
+.resident-list article>div:first-child{display:grid;gap:4px;min-width:0}
+.resident-list article b{color:#365844}
+.resident-list article span,.resident-list article small{color:#87948a;font-size:10px}
+.resident-bill-values{display:grid;justify-items:end;gap:4px;flex:none}
+.resident-bill-values>b{color:#9a641a}
+.resident-savings-current{display:grid;gap:7px;padding:15px;border-radius:10px;background:#f0f8f2}
+.resident-savings-current span{color:#527660;font-size:10px;font-weight:700}
+.resident-savings-current>b{color:#18563a;font:800 21px Manrope,sans-serif}
+.resident-savings-current small{color:#87948a;font-size:10px}
+.resident-week{display:grid}
+.resident-week article{display:grid;grid-template-columns:85px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #eef2ef;font-size:10px}
+.resident-week article>b{color:#42674e}
+.resident-week article>span{color:#74847a;line-height:1.5}
+.resident-empty{margin:0;padding:14px 0;color:#87948a;font-size:11px;line-height:1.6}
+.resident-activity-note{display:flex;align-items:center;gap:9px;margin-top:12px;padding:11px;border-radius:9px;background:#f6f8f6;color:#77877c;font-size:10px;line-height:1.5}
+.resident-activity-note svg{flex:none;color:#41815a}
+.resident-footer{padding:15px 0;text-align:center;color:#8b988f;font-size:10px}
+.resident-screen:has(.resident-error){display:grid;place-items:center;padding:24px}
+.resident-error{max-width:420px;padding:28px;border:1px solid #e5ece6;border-radius:14px;background:white;text-align:center}
+.resident-error svg{color:#b26a24}
+.resident-error h1{font:700 18px Manrope,sans-serif}
+.resident-error p{color:#78877d;font-size:12px;line-height:1.6}
+.resident-error button{margin:18px auto 0}
+@media(max-width:850px){.resident-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.resident-header{height:62px;padding:0 15px}.resident-account{gap:8px}.resident-account>span{max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.resident-account button{font-size:0}.resident-account button svg{width:16px;height:16px}.resident-content{padding:18px 13px}.resident-welcome{min-height:155px;padding:19px}.resident-welcome h1{font-size:23px}.resident-welcome-icon{width:46px;height:46px;border-radius:14px}.resident-welcome-icon svg{width:25px}.resident-stat-grid{gap:9px}.resident-stat-grid article{padding:13px}.resident-stat-grid article>b{font-size:15px}.resident-columns{grid-template-columns:1fr;gap:11px}.resident-card{padding:15px}}

@@ -1,0 +1,10 @@
+{
+  "name": "Widoroku RT",
+  "short_name": "Widoroku",
+  "description": "Portal warga, jimpitan, iuran dan tabungan RT",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7f4",
+  "theme_color": "#0d3b2e",
+  "icons": []
+}

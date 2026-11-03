@@ -1,0 +1,40 @@
+/* =========================================================
+   Modal bersama (Data warga, Kumpulan Ahad Pon, dll.)
+   ========================================================= */
+.modal-backdrop{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:18px;background:#0a211a66;backdrop-filter:blur(3px);animation:fade-in .16s ease}
+.modal{width:100%;max-width:540px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #e6eee7;border-radius:18px;box-shadow:0 24px 60px #0b211a3d;animation:modal-pop .18s ease}
+.modal.small{max-width:380px}
+.modal.medium{max-width:620px}
+.modal.wide{max-width:860px}
+.modal-header{display:flex;align-items:flex-start;gap:12px;padding:18px 20px;border-bottom:1px solid #eef2ee;position:relative;background:#fff;z-index:1;border-radius:18px 18px 0 0;flex-shrink:0}
+.modal-header>div{min-width:0;flex:1}
+.modal-header h3{margin:0;font:700 15px Manrope,sans-serif;color:#284535;letter-spacing:-.3px}
+.modal-header p{margin:5px 0 0;font-size:10px;color:#8b9b91;line-height:1.5}
+.modal-header .icon-btn{flex-shrink:0}
+.modal-body{padding:18px 20px;display:grid;gap:15px;overflow:auto;flex:1;min-height:0;align-content:start}
+.modal-footer{display:flex;gap:9px;justify-content:flex-end;flex-shrink:0;padding:15px 20px;border-top:1px solid #eef2ee;background:#fbfdfb;border-radius:0 0 18px 18px;flex-wrap:wrap}
+.modal-footer .primary-btn{min-width:120px}
+.modal-footer .ghost-btn,.ghost-btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 14px;border-radius:9px;border:1px solid #dfe9e1;background:#fff;color:#557061;font-size:11px;font-weight:700;transition:.15s}
+.modal-footer .ghost-btn:hover,.ghost-btn:hover{border-color:#a4cfb2;color:#22744c;background:#f8fcfa}
+.ghost-btn:disabled,.modal-footer .ghost-btn:disabled{opacity:.55;cursor:not-allowed}
+
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes modal-pop{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+
+/* --- Form di dalam modal --- */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-grid .span-2{grid-column:1 / -1}
+.form-grid label{display:grid;gap:7px;font-size:11px;font-weight:600;color:#526b5b}
+.form-grid input,.form-grid select{width:100%;padding:11px 12px;border:1px solid #dfe9e1;background:#fbfdfb;border-radius:9px;outline:none;color:#2b4737;font-size:12px;transition:.15s}
+.form-grid input:focus,.form-grid select:focus{border-color:#6db38a;box-shadow:0 0 0 3px #64ad8018;background:#fff}
+.form-grid .hint{font-size:10px;color:#8b9a90;line-height:1.6;margin:0}
+.form-error{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:9px;background:#fdeceb;border:1px solid #f6cfcb;color:#b04a3f;font-size:10px;line-height:1.5}
+.form-success{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:9px;background:#e9f7ee;border:1px solid #c9e8d3;color:#22744c;font-size:10px;line-height:1.5}
+
+@media(max-width:560px){
+  .form-grid{grid-template-columns:1fr}
+  .modal{max-height:94vh;border-radius:16px}
+  .modal-header,.modal-body{padding:16px}
+  .modal-footer{padding:13px 16px;flex-wrap:wrap;gap:8px}
+  .modal-footer .primary-btn,.modal-footer .ghost-btn{flex:1 1 140px;min-width:0;white-space:nowrap}
+}

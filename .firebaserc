@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "tri-manunggal"
+  },
+  "targets": {
+    "tri-manunggal": {
+      "hosting": {
+        "widoroku": [
+          "widoroku"
+        ]
+      }
+    }
+  }
+}

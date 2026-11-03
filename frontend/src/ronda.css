@@ -1,0 +1,37 @@
+.ronda-grid{align-items:start}
+.ronda-coordinators{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ronda-total{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;border:1px solid #d9ecdf;border-radius:10px;background:#f3faf5;color:#456452;font-size:12px}
+.ronda-total b{font:700 15px Manrope,sans-serif;color:#17563b}
+.ronda-success{padding:11px 13px;margin-bottom:16px;border:1px solid #c9e8d2;border-radius:9px;background:#f1faf3;color:#276444;font-size:12px}
+.ronda-row{display:flex;align-items:flex-start;gap:12px;padding:15px 0;border-bottom:1px solid #edf1ee}
+.ronda-row-icon{width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:10px;background:#e7f4eb;color:#267454}
+.ronda-row-copy{display:grid;gap:5px;font-size:12px}
+.ronda-row-copy span,.ronda-row-copy small{color:#819188;font-size:11px}
+.ronda-schedule-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.ronda-day{display:grid;gap:8px}
+.ronda-day>span{display:flex;align-items:center;gap:7px;color:#345943;font-size:12px;font-weight:700}
+.ronda-day textarea{width:100%;min-height:72px;resize:vertical;padding:10px 11px;border:1px solid #dfe9e1;border-radius:8px;font:inherit;font-size:12px;line-height:1.5;color:#20372f}
+.ronda-day textarea:disabled{background:#f7f9f7;color:#526b5b}
+.ronda-day small{color:#819188;font-size:10px}
+.ronda-schedule-form>.primary-btn{grid-column:1/-1;justify-self:start}
+.ronda-export-actions{display:flex;gap:18px;margin-bottom:16px}
+.ronda-export-actions button{display:inline-flex;align-items:center;gap:6px}
+.ronda-attendance-date{max-width:280px;margin-bottom:18px}
+.ronda-attendance-date label{display:grid;gap:7px;color:#385a45;font-size:11px;font-weight:600}
+.ronda-audit-entry{padding:15px 0;border-bottom:1px solid #edf1ee}
+.ronda-audit-entry>header{display:flex;justify-content:space-between;gap:12px;font-size:12px}
+.ronda-audit-entry>header span{color:#819188}
+.ronda-audit-changes{display:grid;gap:7px;margin-top:10px}
+.ronda-audit-changes>div{display:grid;grid-template-columns:75px 1fr;gap:10px;font-size:11px}
+.ronda-audit-changes>div>b{color:#456452}
+.ronda-audit-changes span{color:#728177}
+.ronda-audit-changes i{padding:0 5px;color:#267454;font-style:normal}
+@media(max-width:760px){.ronda-coordinators,.ronda-schedule-form{grid-template-columns:1fr}.ronda-schedule-form>.primary-btn{grid-column:auto}}
+@media print{
+  body:has(.ronda-print-area) *{visibility:hidden!important}
+  .ronda-print-area,.ronda-print-area *{visibility:visible!important}
+  .ronda-print-area{position:absolute;left:0;top:0;width:100%;border:0!important;box-shadow:none!important}
+  .ronda-no-print{display:none!important}
+  .ronda-print-area .table-wrap{overflow:visible}
+  .ronda-print-area table{width:100%;font-size:10pt}
+}
